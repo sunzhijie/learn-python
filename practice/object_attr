@@ -1,0 +1,24 @@
+class Student(object):
+    def __init__(self):
+        self.age = '1'
+        self.__name = 'lily'
+
+    def get_name(self):
+        return self.__name
+
+
+s = Student()
+# getattr
+print 'age is ' + getattr(s, 'age')
+# print 'name is ' + s.get_name()
+get_name = getattr(s, 'get_name')
+# print get_name
+print 'name is ' + get_name()
+
+#hasattr
+print hasattr(s, 'age')
+print hasattr(s, '__name')
+
+#setatt
+setattr(s, 'y', 3232)
+print s.y
